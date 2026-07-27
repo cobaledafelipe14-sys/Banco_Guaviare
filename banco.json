@@ -1,0 +1,118 @@
+{
+    "clientes": [
+        {
+            "id": 1,
+            "cedula": "string",
+            "nombre": "string",
+            "email": "string"
+        },
+        {
+            "id": 2,
+            "cedula": "123456789",
+            "nombre": "Murcia",
+            "email": "murci@gmail.com"
+        },
+        {
+            "id": 3,
+            "cedula": "12345678",
+            "nombre": "Andres",
+            "email": "Andres@gmail.com"
+        }
+    ],
+    "cuentas": [
+        {
+            "numero_cuenta": "CTA-1001",
+            "cliente_id": 1,
+            "saldo": 10000000.0
+        },
+        {
+            "numero_cuenta": "CTA-1002",
+            "cliente_id": 1,
+            "saldo": 10000000.0
+        },
+        {
+            "numero_cuenta": "CTA-1003",
+            "cliente_id": 2,
+            "saldo": 9999000.0
+        },
+        {
+            "numero_cuenta": "CTA-1004",
+            "cliente_id": 3,
+            "saldo": 580.0
+        }
+    ],
+    "transacciones": [
+        {
+            "id": 1,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "CTA-1004",
+            "cuenta_destino": null,
+            "monto": 10.0,
+            "fecha": "2026-07-27 10:42:34"
+        },
+        {
+            "id": 2,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "CTA-1004",
+            "cuenta_destino": null,
+            "monto": 10.0,
+            "fecha": "2026-07-27 10:42:47"
+        },
+        {
+            "id": 3,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "CTA-1004",
+            "cuenta_destino": null,
+            "monto": 10.0,
+            "fecha": "2026-07-27 10:42:56"
+        },
+        {
+            "id": 4,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "CTA-1004",
+            "cuenta_destino": null,
+            "monto": 10.0,
+            "fecha": "2026-07-27 10:42:56"
+        },
+        {
+            "id": 5,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "CTA-1004",
+            "cuenta_destino": null,
+            "monto": 10.0,
+            "fecha": "2026-07-27 10:42:57"
+        },
+        {
+            "id": 6,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "CTA-1004",
+            "cuenta_destino": null,
+            "monto": 10.0,
+            "fecha": "2026-07-27 10:42:57"
+        },
+        {
+            "id": 7,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "CTA-1004",
+            "cuenta_destino": null,
+            "monto": 10.0,
+            "fecha": "2026-07-27 10:42:57"
+        },
+        {
+            "id": 8,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "CTA-1003",
+            "cuenta_destino": "CTA-1004",
+            "monto": 1000.0,
+            "fecha": "2026-07-27 10:43:48"
+        },
+        {
+            "id": 9,
+            "tipo": "RETIRO",
+            "cuenta_origen": "CTA-1004",
+            "cuenta_destino": null,
+            "monto": 500.0,
+            "fecha": "2026-07-27 10:45:24"
+        }
+    ]
+}
