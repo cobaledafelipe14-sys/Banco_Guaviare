@@ -264,3 +264,77 @@ def transferir(transferencia: TransferenciaCreate):
         "mensaje": "Transferencia realizada con éxito",
         "comprobante": registro,
     }
+
+# ==========================================
+# ENDPOINTS DE CONSULTA GENERAL (GET)
+# ==========================================
+
+
+@app.get("/clientes", tags=["Consultas General"])
+def listar_todos_los_clientes():
+    """Obtiene la lista completa de todos los clientes registrados."""
+    datos = cargar_datos()
+    return {"total": len(datos["clientes"]), "clientes": datos["clientes"]}
+
+
+@app.get("/cuentas", tags=["Consultas General"])
+def listar_todas_las_cuentas():
+    """Obtiene la lista completa de todas las cuentas bancarias."""
+    datos = cargar_datos()
+    return {"total": len(datos["cuentas"]), "cuentas": datos["cuentas"]}
+
+
+@app.get("/transacciones", tags=["Consultas General"])
+def listar_todas_las_transacciones():
+    """Obtiene el historial global de consignaciones, retiros y transferencias."""
+    datos = cargar_datos()
+    return datos["transacciones"]
+
+
+@app.get("/cuentas/{numero_cuenta}/historial", tags=["Consultas General"])
+def ver_historial_cuenta(numero_cuenta: str):
+    """Genera el extracto bancario con todos los movimientos de una cuenta específica."""
+    datos = cargar_datos()
+
+    # Validar que la cuenta exista
+    cuenta = next(
+        (
+            c
+            for c in datos["cuentas"]
+            if c["numero_cuenta"] == numero_cuenta
+        ),
+        None,
+    )
+    if not cuenta:
+        raise HTTPException(
+            status_code=404, detail="La cuenta especificada no existe."
+        )
+
+    # Filtrar solo los movimientos donde participa esta cuenta
+    consignaciones = [
+        c
+        for c in datos["transacciones"]["consignaciones"]
+        if c["numero_cuenta"] == numero_cuenta
+    ]
+    retiros = [
+        r
+        for r in datos["transacciones"]["retiros"]
+        if r["numero_cuenta"] == numero_cuenta
+    ]
+    transferencias = [
+        t
+        for t in datos["transacciones"]["transferencias"]
+        if t["cuenta_origen"] == numero_cuenta
+        or t["cuenta_destino"] == numero_cuenta
+    ]
+
+    return {
+        "numero_cuenta": numero_cuenta,
+        "saldo_actual": cuenta["saldo"],
+        "estado": cuenta["estado"],
+        "extracto_movimientos": {
+            "consignaciones": consignaciones,
+            "retiros": retiros,
+            "transferencias": transferencias,
+        },
+    }
