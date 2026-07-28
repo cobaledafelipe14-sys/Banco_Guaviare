@@ -1,340 +1,81 @@
-import json
-import os
-from datetime import datetime
-from enum import Enum
-from typing import Optional
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, EmailStr
-
-app = FastAPI(
-    title="Sistema Bancario Backend (JSON) - Guaviare",
-    version="2.0",
-    description="API REST con persistencia modular en JSON",
-)
-
-ARCH_JSON = "banco.json"
-
-
-# --- ENUMERACIONES (Datos Reales) ---
-class TipoDocumento(str, Enum):
-    CC = "CC"
-    CE = "CE"
-    PASAPORTE = "PASAPORTE"
-
-
-class TipoCuenta(str, Enum):
-    AHORROS = "AHORROS"
-    CORRIENTE = "CORRIENTE"
-
-
-# --- MODELOS PYDANTIC ---
-class ClienteCreate(BaseModel):
-    tipo_documento: TipoDocumento
-    cedula: str
-    nombres: str
-    apellidos: str
-    email: EmailStr
-    telefono: str
-
-
-class CuentaCreate(BaseModel):
-    cliente_id: int
-    tipo_cuenta: TipoCuenta
-    saldo_inicial: float
-
-
-class TransaccionSimple(BaseModel):
-    numero_cuenta: str
-    monto: float
-
-
-class TransferenciaCreate(BaseModel):
-    cuenta_origen: str
-    cuenta_destino: str
-    monto: float
-    concepto: Optional[str] = "Transferencia entre cuentas"
-
-
-# --- PERSISTENCIA Y MANEJO DE JSON ---
-def cargar_datos():
-    if not os.path.exists(ARCH_JSON):
-        datos_base = {
-            "clientes": [],
-            "cuentas": [],
-            "transacciones": {
-                "consignaciones": [],
-                "retiros": [],
-                "transferencias": [],
-            },
-        }
-        guardar_datos(datos_base)
-        return datos_base
-
-    with open(ARCH_JSON, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-
-def guardar_datos(datos):
-    with open(ARCH_JSON, "w", encoding="utf-8") as f:
-        json.dump(datos, f, indent=4, ensure_ascii=False)
-
-
-# ==========================================
-# DEV 1: CLIENTES Y CUENTAS
-# ==========================================
-
-
-@app.post("/clientes", tags=["Dev 1 - Clientes"])
-def registrar_cliente(cliente: ClienteCreate):
-    datos = cargar_datos()
-
-    # Validar que la cédula no esté duplicada
-    for c in datos["clientes"]:
-        if c["cedula"] == cliente.cedula:
-            raise HTTPException(
-                status_code=400, detail="El cliente con esta cédula ya existe."
-            )
-
-    nuevo_id = len(datos["clientes"]) + 1
-    nuevo_cliente = {
-        "id": nuevo_id,
-        "tipo_documento": cliente.tipo_documento,
-        "cedula": cliente.cedula,
-        "nombres": cliente.nombres,
-        "apellidos": cliente.apellidos,
-        "email": cliente.email,
-        "telefono": cliente.telefono,
-        "fecha_registro": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-    }
-
-    datos["clientes"].append(nuevo_cliente)
-    guardar_datos(datos)
-    return {
-        "mensaje": "Cliente registrado exitosamente",
-        "cliente": nuevo_cliente,
-    }
-
-
-@app.post("/cuentas", tags=["Dev 1 - Cuentas"])
-def crear_cuenta(cuenta: CuentaCreate):
-    datos = cargar_datos()
-
-    # Validar que el cliente exista por su ID interno
-    cliente_existe = any(c["id"] == cuenta.cliente_id for c in datos["clientes"])
-    if not cliente_existe:
-        raise HTTPException(
-            status_code=404, detail="El cliente especificado no existe."
-        )
-
-    num_cuenta = f"CTA-{40000 + len(datos['cuentas']) + 1}"
-    nueva_cuenta = {
-        "numero_cuenta": num_cuenta,
-        "cliente_id": cuenta.cliente_id,
-        "tipo_cuenta": cuenta.tipo_cuenta,
-        "saldo": cuenta.saldo_inicial,
-        "estado": "ACTIVA",
-        "fecha_apertura": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-    }
-
-    datos["cuentas"].append(nueva_cuenta)
-    guardar_datos(datos)
-    return {"mensaje": "Cuenta creada exitosamente", "cuenta": nueva_cuenta}
-
-
-@app.get("/cuentas/{numero_cuenta}/saldo", tags=["Dev 1 - Cuentas"])
-def consultar_saldo(numero_cuenta: str):
-    datos = cargar_datos()
-    for c in datos["cuentas"]:
-        if c["numero_cuenta"] == numero_cuenta:
-            return {
-                "numero_cuenta": c["numero_cuenta"],
-                "tipo_cuenta": c["tipo_cuenta"],
-                "saldo_actual": c["saldo"],
-                "estado": c["estado"],
-            }
-    raise HTTPException(status_code=404, detail="Cuenta no encontrada.")
-
-
-# ==========================================
-# DEV 2: TRANSACCIONES DIVIDIDAS
-# ==========================================
-
-
-@app.post("/transacciones/consignar", tags=["Dev 2 - Transacciones"])
-def consignar(transaccion: TransaccionSimple):
-    datos = cargar_datos()
-    cuenta = next(
-        (c for c in datos["cuentas"] if c["numero_cuenta"] == transaccion.numero_cuenta),
-        None,
-    )
-
-    if not cuenta:
-        raise HTTPException(status_code=404, detail="Cuenta no encontrada.")
-
-    cuenta["saldo"] += transaccion.monto
-
-    registro = {
-        "id": f"CNS-{len(datos['transacciones']['consignaciones']) + 1:03d}",
-        "numero_cuenta": transaccion.numero_cuenta,
-        "monto": transaccion.monto,
-        "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-    }
-
-    datos["transacciones"]["consignaciones"].append(registro)
-    guardar_datos(datos)
-    return {
-        "mensaje": "Consignación exitosa",
-        "nuevo_saldo": cuenta["saldo"],
-        "comprobante": registro,
-    }
-
-
-@app.post("/transacciones/retirar", tags=["Dev 2 - Transacciones"])
-def retirar(transaccion: TransaccionSimple):
-    datos = cargar_datos()
-    cuenta = next(
-        (c for c in datos["cuentas"] if c["numero_cuenta"] == transaccion.numero_cuenta),
-        None,
-    )
-
-    if not cuenta:
-        raise HTTPException(status_code=404, detail="Cuenta no encontrada.")
-
-    if cuenta["saldo"] < transaccion.monto:
-        raise HTTPException(
-            status_code=400, detail="Saldo insuficiente para realizar el retiro."
-        )
-
-    cuenta["saldo"] -= transaccion.monto
-
-    registro = {
-        "id": f"RET-{len(datos['transacciones']['retiros']) + 1:03d}",
-        "numero_cuenta": transaccion.numero_cuenta,
-        "monto": transaccion.monto,
-        "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-    }
-
-    datos["transacciones"]["retiros"].append(registro)
-    guardar_datos(datos)
-    return {
-        "mensaje": "Retiro exitoso",
-        "nuevo_saldo": cuenta["saldo"],
-        "comprobante": registro,
-    }
-
-
-@app.post("/transacciones/transferir", tags=["Dev 2 - Transacciones"])
-def transferir(transferencia: TransferenciaCreate):
-    datos = cargar_datos()
-
-    origen = next(
-        (c for c in datos["cuentas"] if c["numero_cuenta"] == transferencia.cuenta_origen),
-        None,
-    )
-    destino = next(
-        (c for c in datos["cuentas"] if c["numero_cuenta"] == transferencia.cuenta_destino),
-        None,
-    )
-
-    if not origen or not destino:
-        raise HTTPException(
-            status_code=404, detail="Una o ambas cuentas no existen."
-        )
-
-    if origen["saldo"] < transferencia.monto:
-        raise HTTPException(
-            status_code=400, detail="Saldo insuficiente en la cuenta origen."
-        )
-
-    origen["saldo"] -= transferencia.monto
-    destino["saldo"] += transferencia.monto
-
-    registro = {
-        "id": f"TRF-{len(datos['transacciones']['transferencias']) + 1:03d}",
-        "cuenta_origen": transferencia.cuenta_origen,
-        "cuenta_destino": transferencia.cuenta_destino,
-        "monto": transferencia.monto,
-        "concepto": transferencia.concepto,
-        "fecha": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-    }
-
-    datos["transacciones"]["transferencias"].append(registro)
-    guardar_datos(datos)
-    return {
-        "mensaje": "Transferencia realizada con éxito",
-        "comprobante": registro,
-    }
-
-# ==========================================
-# ENDPOINTS DE CONSULTA GENERAL (GET)
-# ==========================================
-
-
-@app.get("/clientes", tags=["Consultas General"])
-def listar_todos_los_clientes():
-    """Obtiene la lista completa de todos los clientes registrados."""
-    datos = cargar_datos()
-    return {"total": len(datos["clientes"]), "clientes": datos["clientes"]}
-
-
-@app.get("/cuentas", tags=["Consultas General"])
-def listar_todas_las_cuentas():
-    """Obtiene la lista completa de todas las cuentas bancarias."""
-    datos = cargar_datos()
-    return {"total": len(datos["cuentas"]), "cuentas": datos["cuentas"]}
-
-
-@app.get("/transacciones", tags=["Consultas General"])
-def listar_todas_las_transacciones():
-    """Obtiene el historial global de consignaciones, retiros y transferencias."""
-    datos = cargar_datos()
-    return datos["transacciones"]
-
-
-@app.get("/cuentas/{numero_cuenta}/historial", tags=["Consultas General"])
-def ver_historial_cuenta(numero_cuenta: str):
-    """Genera el extracto bancario con todos los movimientos de una cuenta específica."""
-    datos = cargar_datos()
-
-    # Validar que la cuenta exista
-    cuenta = next(
-        (
-            c
-            for c in datos["cuentas"]
-            if c["numero_cuenta"] == numero_cuenta
-        ),
-        None,
-    )
-    if not cuenta:
-        raise HTTPException(
-            status_code=404, detail="La cuenta especificada no existe."
-        )
-
-    # Filtrar solo los movimientos donde participa esta cuenta
-    consignaciones = [
-        c
-        for c in datos["transacciones"]["consignaciones"]
-        if c["numero_cuenta"] == numero_cuenta
-    ]
-    retiros = [
-        r
-        for r in datos["transacciones"]["retiros"]
-        if r["numero_cuenta"] == numero_cuenta
-    ]
-    transferencias = [
-        t
-        for t in datos["transacciones"]["transferencias"]
-        if t["cuenta_origen"] == numero_cuenta
-        or t["cuenta_destino"] == numero_cuenta
-    ]
-
-    return {
-        "numero_cuenta": numero_cuenta,
-        "saldo_actual": cuenta["saldo"],
-        "estado": cuenta["estado"],
-        "extracto_movimientos": {
-            "consignaciones": consignaciones,
-            "retiros": retiros,
-            "transferencias": transferencias,
-        },
-    }
+from clientes import listar_clientes, buscar_cliente, crear_cliente, eliminar_cliente
+from cuentas import ver_cuentas, eliminar_cuenta, agregar_cuenta_a_cliente
+from transacciones import sub_menu_transacciones
+
+def sub_menu_cuentas():
+    while True:
+        print("\n" + "="*50)
+        print("          GESTIÓN DE CUENTAS BANCARIAS")
+        print("="*50)
+        print("1. Ver cuentas bancarias (Ahorros / Corriente)")
+        print("2. Abrir cuenta adicional a cliente existente")
+        print("3. Volver al menú principal")
+        print("="*50)
+        
+        opc = input("Seleccione una opción (1-3): ").strip()
+        
+        if opc == "1":
+            ver_cuentas()
+        elif opc == "2":
+            agregar_cuenta_a_cliente()
+        elif opc == "3":
+            break
+        else:
+            print("\n❌ Opción no válida.")
+
+def sub_menu_eliminar():
+    print("\n" + "="*50)
+    print("          MÓDULO DE ELIMINACIÓN DE DATOS")
+    print("="*50)
+    print("1. Eliminar un cliente (y sus cuentas asociadas)")
+    print("2. Eliminar únicamente una cuenta bancaria")
+    print("3. Volver al menú principal")
+    print("="*50)
+    
+    opc = input("Seleccione una opción (1-3): ").strip()
+    
+    if opc == "1":
+        eliminar_cliente()
+    elif opc == "2":
+        eliminar_cuenta()
+    elif opc == "3":
+        return
+    else:
+        print("\n❌ Opción no válida.")
+
+def menu():
+    while True:
+        print("\n" + "="*50)
+        print("     SISTEMA BANCARIO - BANCO GUAVIARE (CLI)")
+        print("="*50)
+        print("1. Listar todos los clientes (con sus cuentas)")
+        print("2. Buscar cliente por documento o ID")
+        print("3. Registrar nuevo cliente y aperturar cuenta(s)")
+        print("4. Gestión de Cuentas (Ver / Abrir adicional)")
+        print("5. Realizar transacciones (Consignar, Retirar, Transferir, Historial)")
+        print("6. Eliminar cliente o cuenta bancaria")
+        print("7. Salir")
+        print("="*50)
+        
+        opcion = input("Seleccione una opción (1-7): ").strip()
+        
+        if opcion == "1":
+            listar_clientes()
+        elif opcion == "2":
+            buscar_cliente()
+        elif opcion == "3":
+            crear_cliente()
+        elif opcion == "4":
+            sub_menu_cuentas()
+        elif opcion == "5":
+            sub_menu_transacciones()
+        elif opcion == "6":
+            sub_menu_eliminar()
+        elif opcion == "7":
+            print("\n¡Gracias por utilizar el sistema del Banco Guaviare! Hasta luego.\n")
+            break
+        else:
+            print("\n❌ Opción no válida. Por favor, intente de nuevo.")
+
+if __name__ == "__main__":
+    menu()

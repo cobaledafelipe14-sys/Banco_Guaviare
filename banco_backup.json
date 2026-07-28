@@ -1,0 +1,1336 @@
+{
+    "clientes": [
+        {
+            "id": 1,
+            "tipo_documento": "CC",
+            "cedula": "1001234567",
+            "nombres": "Carlos Alberto",
+            "apellidos": "Murcia Pérez",
+            "email": "carlos.murcia@email.com",
+            "telefono": "3101234567",
+            "fecha_registro": "2026-07-01 08:30:00"
+        },
+        {
+            "id": 2,
+            "tipo_documento": "CC",
+            "cedula": "1002345678",
+            "nombres": "María Fernanda",
+            "apellidos": "Gómez López",
+            "email": "mf.gomez@email.com",
+            "telefono": "3112345678",
+            "fecha_registro": "2026-07-01 09:15:00"
+        },
+        {
+            "id": 3,
+            "tipo_documento": "CE",
+            "cedula": "500345678",
+            "nombres": "John",
+            "apellidos": "Smith",
+            "email": "john.smith@email.com",
+            "telefono": "3123456789",
+            "fecha_registro": "2026-07-02 10:00:00"
+        },
+        {
+            "id": 4,
+            "tipo_documento": "CC",
+            "cedula": "1004567890",
+            "nombres": "Juan Pablo",
+            "apellidos": "Rodríguez Silva",
+            "email": "jp.rodriguez@email.com",
+            "telefono": "3134567890",
+            "fecha_registro": "2026-07-02 11:20:00"
+        },
+        {
+            "id": 5,
+            "tipo_documento": "CC",
+            "cedula": "1005678901",
+            "nombres": "Ana Lucía",
+            "apellidos": "Martínez Ruiz",
+            "email": "ana.martinez@email.com",
+            "telefono": "3145678901",
+            "fecha_registro": "2026-07-03 14:10:00"
+        },
+        {
+            "id": 6,
+            "tipo_documento": "PASAPORTE",
+            "cedula": "A1234567",
+            "nombres": "Pierre",
+            "apellidos": "Dubois",
+            "email": "pierre.dubois@email.com",
+            "telefono": "3156789012",
+            "fecha_registro": "2026-07-03 15:45:00"
+        },
+        {
+            "id": 7,
+            "tipo_documento": "CC",
+            "cedula": "1007890123",
+            "nombres": "Lina Marcela",
+            "apellidos": "Hernández Cano",
+            "email": "lina.h@email.com",
+            "telefono": "3167890123",
+            "fecha_registro": "2026-07-04 09:05:00"
+        },
+        {
+            "id": 8,
+            "tipo_documento": "CC",
+            "cedula": "1008901234",
+            "nombres": "David Esteban",
+            "apellidos": "Díaz Castro",
+            "email": "david.diaz@email.com",
+            "telefono": "3178901234",
+            "fecha_registro": "2026-07-04 11:30:00"
+        },
+        {
+            "id": 9,
+            "tipo_documento": "CC",
+            "cedula": "1009012345",
+            "nombres": "Sofia",
+            "apellidos": "Torres Morales",
+            "email": "sofia.torres@email.com",
+            "telefono": "3189012345",
+            "fecha_registro": "2026-07-05 16:00:00"
+        },
+        {
+            "id": 10,
+            "tipo_documento": "CC",
+            "cedula": "1010123456",
+            "nombres": "Santiago",
+            "apellidos": "Vargas Mendoza",
+            "email": "santiago.vargas@email.com",
+            "telefono": "3190123456",
+            "fecha_registro": "2026-07-05 17:25:00"
+        },
+        {
+            "id": 11,
+            "tipo_documento": "CC",
+            "cedula": "1011234567",
+            "nombres": "Valentina",
+            "apellidos": "Ríos Ortiz",
+            "email": "valen.rios@email.com",
+            "telefono": "3001234567",
+            "fecha_registro": "2026-07-06 08:40:00"
+        },
+        {
+            "id": 12,
+            "tipo_documento": "CE",
+            "cedula": "500234567",
+            "nombres": "Hans",
+            "apellidos": "Müller",
+            "email": "hans.muller@email.com",
+            "telefono": "3012345678",
+            "fecha_registro": "2026-07-06 10:15:00"
+        },
+        {
+            "id": 13,
+            "tipo_documento": "CC",
+            "cedula": "1013456789",
+            "nombres": "Mateo",
+            "apellidos": "Castillo Vega",
+            "email": "mateo.castillo@email.com",
+            "telefono": "3023456789",
+            "fecha_registro": "2026-07-07 12:00:00"
+        },
+        {
+            "id": 14,
+            "tipo_documento": "CC",
+            "cedula": "1014567890",
+            "nombres": "Camila",
+            "apellidos": "Guerrero Parra",
+            "email": "camila.guerrero@email.com",
+            "telefono": "3034567890",
+            "fecha_registro": "2026-07-07 13:50:00"
+        },
+        {
+            "id": 15,
+            "tipo_documento": "CC",
+            "cedula": "1015678901",
+            "nombres": "Alejandro",
+            "apellidos": "Sánchez Mejía",
+            "email": "alejo.sanchez@email.com",
+            "telefono": "3045678901",
+            "fecha_registro": "2026-07-08 09:30:00"
+        },
+        {
+            "id": 16,
+            "tipo_documento": "CC",
+            "cedula": "1016789012",
+            "nombres": "Daniela",
+            "apellidos": "Romero Suarez",
+            "email": "dani.romero@email.com",
+            "telefono": "3056789012",
+            "fecha_registro": "2026-07-08 15:10:00"
+        },
+        {
+            "id": 17,
+            "tipo_documento": "PASAPORTE",
+            "cedula": "B9876543",
+            "nombres": "Akira",
+            "apellidos": "Tanaka",
+            "email": "akira.tanaka@email.com",
+            "telefono": "3067890123",
+            "fecha_registro": "2026-07-09 11:05:00"
+        },
+        {
+            "id": 18,
+            "tipo_documento": "CC",
+            "cedula": "1018901234",
+            "nombres": "Andrés Felipe",
+            "apellidos": "Navarro Gil",
+            "email": "af.navarro@email.com",
+            "telefono": "3078901234",
+            "fecha_registro": "2026-07-09 14:40:00"
+        },
+        {
+            "id": 19,
+            "tipo_documento": "CC",
+            "cedula": "1019012345",
+            "nombres": "Gabriela",
+            "apellidos": "Mendoza Reyes",
+            "email": "gaby.mendoza@email.com",
+            "telefono": "3089012345",
+            "fecha_registro": "2026-07-10 10:20:00"
+        },
+        {
+            "id": 20,
+            "tipo_documento": "CC",
+            "cedula": "1020123456",
+            "nombres": "Javier",
+            "apellidos": "Acosta Benítez",
+            "email": "javier.acosta@email.com",
+            "telefono": "3090123456",
+            "fecha_registro": "2026-07-10 16:30:00"
+        },
+        {
+            "id": 21,
+            "tipo_documento": "CC",
+            "cedula": "1021234567",
+            "nombres": "Isabella",
+            "apellidos": "Paredes Franco",
+            "email": "isa.paredes@email.com",
+            "telefono": "3109876543",
+            "fecha_registro": "2026-07-11 08:15:00"
+        },
+        {
+            "id": 22,
+            "tipo_documento": "CE",
+            "cedula": "500345890",
+            "nombres": "Lucas",
+            "apellidos": "Rossi",
+            "email": "lucas.rossi@email.com",
+            "telefono": "3118765432",
+            "fecha_registro": "2026-07-11 11:45:00"
+        },
+        {
+            "id": 23,
+            "tipo_documento": "CC",
+            "cedula": "1023456789",
+            "nombres": "Samuel",
+            "apellidos": "Sosa Delgado",
+            "email": "samuel.sosa@email.com",
+            "telefono": "3127654321",
+            "fecha_registro": "2026-07-12 09:00:00"
+        },
+        {
+            "id": 24,
+            "tipo_documento": "CC",
+            "cedula": "1024567890",
+            "nombres": "Mariana",
+            "apellidos": "Cárdenas Marín",
+            "email": "mariana.c@email.com",
+            "telefono": "3136543210",
+            "fecha_registro": "2026-07-12 14:15:00"
+        },
+        {
+            "id": 25,
+            "tipo_documento": "CC",
+            "cedula": "1025678901",
+            "nombres": "Nicolás",
+            "apellidos": "Salazar Prado",
+            "email": "nico.salazar@email.com",
+            "telefono": "3145432109",
+            "fecha_registro": "2026-07-13 10:50:00"
+        },
+        {
+            "id": 26,
+            "tipo_documento": "CC",
+            "cedula": "1026789012",
+            "nombres": "Paula",
+            "apellidos": "Arias Lara",
+            "email": "paula.arias@email.com",
+            "telefono": "3154321098",
+            "fecha_registro": "2026-07-13 15:30:00"
+        },
+        {
+            "id": 27,
+            "tipo_documento": "PASAPORTE",
+            "cedula": "C4567890",
+            "nombres": "Elena",
+            "apellidos": "Petrova",
+            "email": "elena.petrova@email.com",
+            "telefono": "3163210987",
+            "fecha_registro": "2026-07-14 12:10:00"
+        },
+        {
+            "id": 28,
+            "tipo_documento": "CC",
+            "cedula": "1028901234",
+            "nombres": "Emmanuel",
+            "apellidos": "Correa Bernal",
+            "email": "e.correa@email.com",
+            "telefono": "3172109876",
+            "fecha_registro": "2026-07-14 16:40:00"
+        },
+        {
+            "id": 29,
+            "tipo_documento": "CC",
+            "cedula": "1029012345",
+            "nombres": "Salomé",
+            "apellidos": "Mora Caicedo",
+            "email": "salome.mora@email.com",
+            "telefono": "3181098765",
+            "fecha_registro": "2026-07-15 09:25:00"
+        },
+        {
+            "id": 30,
+            "tipo_documento": "CC",
+            "cedula": "1030123456",
+            "nombres": "Sebastián",
+            "apellidos": "Bermúdez Ríos",
+            "email": "sebas.b@email.com",
+            "telefono": "3190098765",
+            "fecha_registro": "2026-07-15 13:00:00"
+        },
+        {
+            "id": 31,
+            "tipo_documento": "CC",
+            "cedula": "1031234567",
+            "nombres": "Luciana",
+            "apellidos": "Echeverri Osorio",
+            "email": "lu.echeverri@email.com",
+            "telefono": "3009876543",
+            "fecha_registro": "2026-07-16 11:15:00"
+        },
+        {
+            "id": 32,
+            "tipo_documento": "CE",
+            "cedula": "500456123",
+            "nombres": "Marco",
+            "apellidos": "Silva",
+            "email": "marco.silva@email.com",
+            "telefono": "3018765432",
+            "fecha_registro": "2026-07-16 15:20:00"
+        },
+        {
+            "id": 33,
+            "tipo_documento": "CC",
+            "cedula": "1033456789",
+            "nombres": "Joaquín",
+            "apellidos": "Montoya Henao",
+            "email": "joaquin.m@email.com",
+            "telefono": "3027654321",
+            "fecha_registro": "2026-07-17 08:50:00"
+        },
+        {
+            "id": 34,
+            "tipo_documento": "CC",
+            "cedula": "1034567890",
+            "nombres": "Sara",
+            "apellidos": "Zapata Gallego",
+            "email": "sara.zapata@email.com",
+            "telefono": "3036543210",
+            "fecha_registro": "2026-07-17 14:05:00"
+        },
+        {
+            "id": 35,
+            "tipo_documento": "CC",
+            "cedula": "1035678901",
+            "nombres": "Jerónimo",
+            "apellidos": "Villegas Monsalve",
+            "email": "jero.villegas@email.com",
+            "telefono": "3045432109",
+            "fecha_registro": "2026-07-18 10:35:00"
+        },
+        {
+            "id": 36,
+            "tipo_documento": "CC",
+            "cedula": "1036789012",
+            "nombres": "Antonia",
+            "apellidos": "Restrepo Jaramillo",
+            "email": "antonia.r@email.com",
+            "telefono": "3054321098",
+            "fecha_registro": "2026-07-18 16:00:00"
+        },
+        {
+            "id": 37,
+            "tipo_documento": "PASAPORTE",
+            "cedula": "D7890123",
+            "nombres": "Chloe",
+            "apellidos": "Bernard",
+            "email": "chloe.bernard@email.com",
+            "telefono": "3063210987",
+            "fecha_registro": "2026-07-19 09:10:00"
+        },
+        {
+            "id": 38,
+            "tipo_documento": "CC",
+            "cedula": "1038901234",
+            "nombres": "Tomás",
+            "apellidos": "Holguín Cardona",
+            "email": "tomas.h@email.com",
+            "telefono": "3072109876",
+            "fecha_registro": "2026-07-19 12:45:00"
+        },
+        {
+            "id": 39,
+            "tipo_documento": "CC",
+            "cedula": "1039012345",
+            "nombres": "Valerie",
+            "apellidos": "Valencia Castaño",
+            "email": "valerie.v@email.com",
+            "telefono": "3081098765",
+            "fecha_registro": "2026-07-20 11:30:00"
+        },
+        {
+            "id": 40,
+            "tipo_documento": "CC",
+            "cedula": "1040123456",
+            "nombres": "Emilio",
+            "apellidos": "Pineda Marulanda",
+            "email": "emilio.pineda@email.com",
+            "telefono": "3090098765",
+            "fecha_registro": "2026-07-20 15:00:00"
+        },
+        {
+            "id": 41,
+            "tipo_documento": "CC",
+            "cedula": "1041234567",
+            "nombres": "Esteban",
+            "apellidos": "Suárez Franco",
+            "email": "esteban.s@email.com",
+            "telefono": "3105551234",
+            "fecha_registro": "2026-07-21 08:20:00"
+        },
+        {
+            "id": 42,
+            "tipo_documento": "CC",
+            "cedula": "1042345678",
+            "nombres": "Camila Victoria",
+            "apellidos": "Ibáñez Soler",
+            "email": "camila.ibanez@email.com",
+            "telefono": "3115552345",
+            "fecha_registro": "2026-07-21 10:45:00"
+        },
+        {
+            "id": 43,
+            "tipo_documento": "CE",
+            "cedula": "500567890",
+            "nombres": "Arthur",
+            "apellidos": "Pendelton",
+            "email": "arthur.p@email.com",
+            "telefono": "3125553456",
+            "fecha_registro": "2026-07-22 09:15:00"
+        },
+        {
+            "id": 44,
+            "tipo_documento": "CC",
+            "cedula": "1044567890",
+            "nombres": "Manuela",
+            "apellidos": "Botero Hoyos",
+            "email": "manu.botero@email.com",
+            "telefono": "3135554567",
+            "fecha_registro": "2026-07-22 14:00:00"
+        },
+        {
+            "id": 45,
+            "tipo_documento": "CC",
+            "cedula": "1045678901",
+            "nombres": "Felipe",
+            "apellidos": "Giraldo Duque",
+            "email": "pipe.giraldo@email.com",
+            "telefono": "3145555678",
+            "fecha_registro": "2026-07-23 11:30:00"
+        },
+        {
+            "id": 46,
+            "tipo_documento": "CC",
+            "cedula": "1046789012",
+            "nombres": "Laura Camila",
+            "apellidos": "Sarmiento Beltrán",
+            "email": "laura.sarmiento@email.com",
+            "telefono": "3155556789",
+            "fecha_registro": "2026-07-23 16:10:00"
+        },
+        {
+            "id": 47,
+            "tipo_documento": "PASAPORTE",
+            "cedula": "E9012345",
+            "nombres": "Sven",
+            "apellidos": "Lindqvist",
+            "email": "sven.l@email.com",
+            "telefono": "3165557890",
+            "fecha_registro": "2026-07-24 10:00:00"
+        },
+        {
+            "id": 48,
+            "tipo_documento": "CC",
+            "cedula": "1048901234",
+            "nombres": "Ximena",
+            "apellidos": "Villamizar Sepúlveda",
+            "email": "ximena.v@email.com",
+            "telefono": "3175558901",
+            "fecha_registro": "2026-07-24 13:40:00"
+        },
+        {
+            "id": 49,
+            "tipo_documento": "CC",
+            "cedula": "1049012345",
+            "nombres": "Rodrigo",
+            "apellidos": "Chacón Tamayo",
+            "email": "rodrigo.ch@email.com",
+            "telefono": "3185559012",
+            "fecha_registro": "2026-07-25 09:50:00"
+        },
+        {
+            "id": 50,
+            "tipo_documento": "CC",
+            "cedula": "1050123456",
+            "nombres": "Melissa",
+            "apellidos": "Barrientos Quiroz",
+            "email": "melissa.b@email.com",
+            "telefono": "3195550123",
+            "fecha_registro": "2026-07-25 15:15:00"
+        },
+        {
+            "id": 51,
+            "cedula": "1234567",
+            "tipo_documento": "CC",
+            "nombres": "Andres felipe",
+            "apellidos": "Cobaleda Florez",
+            "email": "cobaleda14@gmail.com"
+        },
+        {
+            "id": 52,
+            "cedula": "12345678",
+            "tipo_documento": "TI",
+            "nombres": "Yarlon Sneider",
+            "apellidos": "Rocha Herrera",
+            "email": "yarlon21@gmi"
+        }
+    ],
+    "cuentas": [
+        {
+            "numero_cuenta": "C-A-001",
+            "cliente_id": 1,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 4850000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-01 09:00:00"
+        },
+        {
+            "numero_cuenta": "C-C-001",
+            "cliente_id": 1,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 12000000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-01 09:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-002",
+            "cliente_id": 2,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 950000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-01 10:00:00"
+        },
+        {
+            "numero_cuenta": "C-C-002",
+            "cliente_id": 3,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 3500000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-02 10:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-003",
+            "cliente_id": 4,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 120000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-02 12:00:00"
+        },
+        {
+            "numero_cuenta": "C-A-004",
+            "cliente_id": 5,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 8700000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-03 15:00:00"
+        },
+        {
+            "numero_cuenta": "C-C-003",
+            "cliente_id": 5,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 2300000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-03 15:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-005",
+            "cliente_id": 6,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 15400000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-03 16:00:00"
+        },
+        {
+            "numero_cuenta": "C-A-006",
+            "cliente_id": 7,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 620000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-04 09:30:00"
+        },
+        {
+            "numero_cuenta": "C-C-004",
+            "cliente_id": 8,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 5100000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-04 12:00:00"
+        },
+        {
+            "numero_cuenta": "C-A-007",
+            "cliente_id": 9,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 2800000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-05 16:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-008",
+            "cliente_id": 10,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 430000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-05 18:00:00"
+        },
+        {
+            "numero_cuenta": "C-C-005",
+            "cliente_id": 10,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 6900000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-05 18:15:00"
+        },
+        {
+            "numero_cuenta": "C-A-009",
+            "cliente_id": 11,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 1850000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-06 09:00:00"
+        },
+        {
+            "numero_cuenta": "C-C-006",
+            "cliente_id": 12,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 9200000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-06 10:45:00"
+        },
+        {
+            "numero_cuenta": "C-A-010",
+            "cliente_id": 13,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 310000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-07 12:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-011",
+            "cliente_id": 14,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 7400000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-07 14:10:00"
+        },
+        {
+            "numero_cuenta": "C-C-007",
+            "cliente_id": 14,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 1500000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-07 14:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-012",
+            "cliente_id": 15,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 500000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-08 10:00:00"
+        },
+        {
+            "numero_cuenta": "C-A-013",
+            "cliente_id": 16,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 11200000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-08 15:30:00"
+        },
+        {
+            "numero_cuenta": "C-C-008",
+            "cliente_id": 17,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 4200000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-09 11:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-014",
+            "cliente_id": 18,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 890000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-09 15:00:00"
+        },
+        {
+            "numero_cuenta": "C-C-009",
+            "cliente_id": 18,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 3300000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-09 15:20:00"
+        },
+        {
+            "numero_cuenta": "C-A-015",
+            "cliente_id": 19,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 2100000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-10 10:45:00"
+        },
+        {
+            "numero_cuenta": "C-A-016",
+            "cliente_id": 20,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 6400000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-10 17:00:00"
+        },
+        {
+            "numero_cuenta": "C-C-010",
+            "cliente_id": 21,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 780000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-11 08:45:00"
+        },
+        {
+            "numero_cuenta": "C-A-017",
+            "cliente_id": 22,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 13500000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-11 12:00:00"
+        },
+        {
+            "numero_cuenta": "C-A-018",
+            "cliente_id": 23,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 4100000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-12 09:30:00"
+        },
+        {
+            "numero_cuenta": "C-C-011",
+            "cliente_id": 23,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 800000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-12 09:50:00"
+        },
+        {
+            "numero_cuenta": "C-A-019",
+            "cliente_id": 24,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 290000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-12 14:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-020",
+            "cliente_id": 25,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 5600000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-13 11:15:00"
+        },
+        {
+            "numero_cuenta": "C-C-012",
+            "cliente_id": 26,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 1900000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-13 16:00:00"
+        },
+        {
+            "numero_cuenta": "C-A-021",
+            "cliente_id": 27,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 16800000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-14 12:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-022",
+            "cliente_id": 28,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 720000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-14 17:00:00"
+        },
+        {
+            "numero_cuenta": "C-A-023",
+            "cliente_id": 29,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 3400000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-15 09:45:00"
+        },
+        {
+            "numero_cuenta": "C-C-013",
+            "cliente_id": 29,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 5000000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-15 10:10:00"
+        },
+        {
+            "numero_cuenta": "C-A-024",
+            "cliente_id": 30,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 1250000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-15 13:30:00"
+        },
+        {
+            "numero_cuenta": "C-C-014",
+            "cliente_id": 31,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 9800000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-16 11:45:00"
+        },
+        {
+            "numero_cuenta": "C-A-025",
+            "cliente_id": 32,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 450000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-16 15:40:00"
+        },
+        {
+            "numero_cuenta": "C-A-026",
+            "cliente_id": 33,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 8100000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-17 09:15:00"
+        },
+        {
+            "numero_cuenta": "C-A-027",
+            "cliente_id": 34,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 2200000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-17 14:30:00"
+        },
+        {
+            "numero_cuenta": "C-C-015",
+            "cliente_id": 34,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 4000000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-17 14:50:00"
+        },
+        {
+            "numero_cuenta": "C-A-028",
+            "cliente_id": 35,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 670000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-18 11:00:00"
+        },
+        {
+            "numero_cuenta": "C-C-016",
+            "cliente_id": 36,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 14200000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-18 16:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-029",
+            "cliente_id": 37,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 3900000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-19 09:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-030",
+            "cliente_id": 38,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 180000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-19 13:00:00"
+        },
+        {
+            "numero_cuenta": "C-A-031",
+            "cliente_id": 39,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 5300000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-20 11:50:00"
+        },
+        {
+            "numero_cuenta": "C-C-017",
+            "cliente_id": 39,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 2100000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-20 12:10:00"
+        },
+        {
+            "numero_cuenta": "C-A-032",
+            "cliente_id": 40,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 9700000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-20 15:20:00"
+        },
+        {
+            "numero_cuenta": "C-C-018",
+            "cliente_id": 41,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 1100000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-21 08:40:00"
+        },
+        {
+            "numero_cuenta": "C-A-033",
+            "cliente_id": 42,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 6800000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-21 11:00:00"
+        },
+        {
+            "numero_cuenta": "C-A-034",
+            "cliente_id": 43,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 2500000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-22 09:40:00"
+        },
+        {
+            "numero_cuenta": "C-A-035",
+            "cliente_id": 44,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 840000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-22 14:30:00"
+        },
+        {
+            "numero_cuenta": "C-C-019",
+            "cliente_id": 44,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 7500000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-22 14:50:00"
+        },
+        {
+            "numero_cuenta": "C-A-036",
+            "cliente_id": 45,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 4900000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-23 11:50:00"
+        },
+        {
+            "numero_cuenta": "C-C-020",
+            "cliente_id": 46,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 13000000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-23 16:30:00"
+        },
+        {
+            "numero_cuenta": "C-A-037",
+            "cliente_id": 47,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 18200000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-24 10:20:00"
+        },
+        {
+            "numero_cuenta": "C-A-038",
+            "cliente_id": 48,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 320000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-24 14:00:00"
+        },
+        {
+            "numero_cuenta": "C-C-021",
+            "cliente_id": 48,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 2900000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-24 14:15:00"
+        },
+        {
+            "numero_cuenta": "C-A-039",
+            "cliente_id": 49,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 6100000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-25 10:10:00"
+        },
+        {
+            "numero_cuenta": "C-A-040",
+            "cliente_id": 50,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 1500000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-25 15:30:00"
+        },
+        {
+            "numero_cuenta": "C-C-022",
+            "cliente_id": 50,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 8800000.0,
+            "estado": "ACTIVA",
+            "fecha_apertura": "2026-07-25 15:45:00"
+        },
+        {
+            "id": 1,
+            "numero_cuenta": "C-A-041",
+            "cliente_id": 51,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 15000.0
+        },
+        {
+            "id": 2,
+            "numero_cuenta": "C-C-023",
+            "cliente_id": 51,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 50000.0
+        },
+        {
+            "id": 3,
+            "numero_cuenta": "C-A-042",
+            "cliente_id": 52,
+            "tipo_cuenta": "AHORROS",
+            "saldo": 0.0
+        },
+        {
+            "id": 4,
+            "numero_cuenta": "C-C-024",
+            "cliente_id": 52,
+            "tipo_cuenta": "CORRIENTE",
+            "saldo": 100.0
+        }
+    ],
+    "transacciones": [
+        {
+            "id": 1,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-C-023",
+            "cuenta_destino": null,
+            "monto": 160000,
+            "fecha": "2026-01-04 05:04:17"
+        },
+        {
+            "id": 2,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-A-022",
+            "cuenta_destino": null,
+            "monto": 200000,
+            "fecha": "2026-01-09 15:12:21"
+        },
+        {
+            "id": 3,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-C-016",
+            "cuenta_destino": null,
+            "monto": 100000,
+            "fecha": "2026-01-10 17:10:16"
+        },
+        {
+            "id": 4,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-006",
+            "cuenta_destino": "C-A-019",
+            "monto": 110000,
+            "fecha": "2026-01-22 17:13:34"
+        },
+        {
+            "id": 5,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-A-017",
+            "cuenta_destino": null,
+            "monto": 480000,
+            "fecha": "2026-01-24 16:36:46"
+        },
+        {
+            "id": 6,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-A-005",
+            "cuenta_destino": null,
+            "monto": 180000,
+            "fecha": "2026-01-28 09:12:33"
+        },
+        {
+            "id": 7,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-A-003",
+            "cuenta_destino": null,
+            "monto": 70000,
+            "fecha": "2026-02-06 12:01:46"
+        },
+        {
+            "id": 8,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-A-006",
+            "cuenta_destino": null,
+            "monto": 120000,
+            "fecha": "2026-02-07 16:34:14"
+        },
+        {
+            "id": 9,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-001",
+            "cuenta_destino": "C-A-013",
+            "monto": 50000,
+            "fecha": "2026-02-13 00:03:59"
+        },
+        {
+            "id": 10,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-A-032",
+            "cuenta_destino": null,
+            "monto": 210000,
+            "fecha": "2026-02-17 19:09:33"
+        },
+        {
+            "id": 11,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-C-022",
+            "cuenta_destino": null,
+            "monto": 180000,
+            "fecha": "2026-02-19 08:47:33"
+        },
+        {
+            "id": 12,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-003",
+            "cuenta_destino": "C-A-041",
+            "monto": 290000,
+            "fecha": "2026-02-25 14:17:13"
+        },
+        {
+            "id": 13,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-032",
+            "cuenta_destino": "C-A-021",
+            "monto": 150000,
+            "fecha": "2026-03-09 17:26:43"
+        },
+        {
+            "id": 14,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-A-032",
+            "cuenta_destino": null,
+            "monto": 170000,
+            "fecha": "2026-03-11 20:32:20"
+        },
+        {
+            "id": 15,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-A-005",
+            "cuenta_destino": null,
+            "monto": 160000,
+            "fecha": "2026-03-26 02:55:46"
+        },
+        {
+            "id": 16,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-010",
+            "cuenta_destino": "C-C-016",
+            "monto": 30000,
+            "fecha": "2026-03-28 20:21:46"
+        },
+        {
+            "id": 17,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-C-009",
+            "cuenta_destino": null,
+            "monto": 490000,
+            "fecha": "2026-03-30 08:54:39"
+        },
+        {
+            "id": 18,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-013",
+            "cuenta_destino": "C-A-029",
+            "monto": 250000,
+            "fecha": "2026-04-06 10:03:29"
+        },
+        {
+            "id": 19,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-A-007",
+            "cuenta_destino": null,
+            "monto": 70000,
+            "fecha": "2026-04-09 13:34:05"
+        },
+        {
+            "id": 20,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-040",
+            "cuenta_destino": "C-A-029",
+            "monto": 210000,
+            "fecha": "2026-04-15 04:17:56"
+        },
+        {
+            "id": 21,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-A-035",
+            "cuenta_destino": null,
+            "monto": 330000,
+            "fecha": "2026-04-18 10:49:49"
+        },
+        {
+            "id": 22,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-C-013",
+            "cuenta_destino": null,
+            "monto": 460000,
+            "fecha": "2026-04-21 16:37:14"
+        },
+        {
+            "id": 23,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-A-004",
+            "cuenta_destino": null,
+            "monto": 190000,
+            "fecha": "2026-04-24 06:17:45"
+        },
+        {
+            "id": 24,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-028",
+            "cuenta_destino": "C-C-008",
+            "monto": 70000,
+            "fecha": "2026-05-19 23:39:16"
+        },
+        {
+            "id": 25,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-A-034",
+            "cuenta_destino": null,
+            "monto": 160000,
+            "fecha": "2026-05-22 03:24:42"
+        },
+        {
+            "id": 26,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-A-034",
+            "cuenta_destino": null,
+            "monto": 110000,
+            "fecha": "2026-06-03 00:01:20"
+        },
+        {
+            "id": 27,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-C-019",
+            "cuenta_destino": null,
+            "monto": 160000,
+            "fecha": "2026-06-03 12:19:22"
+        },
+        {
+            "id": 28,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-A-012",
+            "cuenta_destino": null,
+            "monto": 80000,
+            "fecha": "2026-06-13 08:49:42"
+        },
+        {
+            "id": 29,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-013",
+            "cuenta_destino": "C-A-004",
+            "monto": 200000,
+            "fecha": "2026-06-15 09:34:05"
+        },
+        {
+            "id": 30,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-010",
+            "cuenta_destino": "C-C-024",
+            "monto": 40000,
+            "fecha": "2026-06-16 06:16:37"
+        },
+        {
+            "id": 31,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-A-020",
+            "cuenta_destino": "C-A-003",
+            "monto": 120000,
+            "fecha": "2026-06-23 20:11:33"
+        },
+        {
+            "id": 32,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-A-004",
+            "cuenta_destino": null,
+            "monto": 370000,
+            "fecha": "2026-07-03 14:15:31"
+        },
+        {
+            "id": 33,
+            "tipo": "CONSIGNACION",
+            "cuenta_origen": "C-C-014",
+            "cuenta_destino": null,
+            "monto": 470000,
+            "fecha": "2026-07-10 19:46:24"
+        },
+        {
+            "id": 34,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-A-023",
+            "cuenta_destino": null,
+            "monto": 120000,
+            "fecha": "2026-07-15 10:04:25"
+        },
+        {
+            "id": 35,
+            "tipo": "RETIRO",
+            "cuenta_origen": "C-A-013",
+            "cuenta_destino": null,
+            "monto": 100000,
+            "fecha": "2026-07-20 00:39:12"
+        },
+        {
+            "id": 36,
+            "tipo": "TRANSFERENCIA",
+            "cuenta_origen": "C-C-007",
+            "cuenta_destino": "C-A-035",
+            "monto": 170000,
+            "fecha": "2026-07-22 19:22:11"
+        }
+    ]
+}
